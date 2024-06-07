@@ -8,7 +8,7 @@ export * from './number';
 export * from './schema';
 
 export const isProduction = window
-  ? window.location.host.includes('carbondefi.xyz')
+  ? window.location.host.includes('strategies.xfai.com')
   : true;
 
 export const uuid = () => {

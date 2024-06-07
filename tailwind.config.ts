@@ -59,6 +59,28 @@ export default {
         success: lightDark(0.68, 0.153, 160), // #00B578
         warning: lightDark(0.747, 0.18, 57.36), // #ff8a00
         black: oklch(0.13, chroma, hue),
+
+        cyan: '#33CBCB',
+        'cyan-dark': '#049494',
+        magenta: '#FF0098',
+        'magenta-dark': '#B0006A',
+        red: '#ED0131',
+
+        // Themed
+        bg: 'rgb(var(--background) / <alpha-value>)',
+        'white-black': 'rgb(var(--white-black) / <alpha-value>)',
+        'black-white': 'rgb(var(--black-white) / <alpha-value>)',
+        'white-blue': 'rgb(var(--white-blue) / <alpha-value>)',
+        90: 'rgb(var(--grey-90) / <alpha-value>)',
+        80: 'rgb(var(--grey-80) / <alpha-value>)',
+        70: 'rgb(var(--grey-70) / <alpha-value>)',
+        60: 'rgb(var(--grey-60) / <alpha-value>)',
+        50: 'rgb(var(--grey-50) / <alpha-value>)',
+        40: 'rgb(var(--grey-40) / <alpha-value>)',
+        30: 'rgb(var(--grey-30) / <alpha-value>)',
+        20: 'rgb(var(--grey-20) / <alpha-value>)',
+        10: 'rgb(var(--grey-10) / <alpha-value>)',
+        5: 'rgb(var(--grey-5) / <alpha-value>)',
       };
     },
     spacing: createTwConfigValues(0, 100, 1),
@@ -82,9 +104,15 @@ export default {
       DEFAULT: '16px',
       full: '9999px',
     },
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops) 50% 50%)',
+    },
+    dropShadow: {
+      '3xl': '0 13px 13px rgb(0 0 0 / 0.05)',
+    },
     fontFamily: {
-      text: ['Carbon-Text', 'sans-serif'],
-      title: ['Carbon-Title', 'sans-serif'],
+      text: ['var(--font-family, Rubik)', 'sans-serif'],
+      title: ['var(--font-family, Rubik)', 'sans-serif'],
     },
     fontSize: {
       10: ['0.625rem', { lineHeight: '0.875rem' }],

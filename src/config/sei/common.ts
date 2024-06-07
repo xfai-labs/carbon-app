@@ -1,5 +1,6 @@
 import { AppConfig } from 'config/types';
-import IconSeiLogo from 'assets/logos/seilogo.svg';
+import IconXfaiLogo from 'assets/logos/xfaiLogo.svg';
+
 import { tokenListParser } from 'config/sei/utils';
 
 const addresses = {
@@ -19,8 +20,8 @@ export const commonConfig: AppConfig = {
   isSimulatorEnabled: false,
   policiesLastUpdated: '27 May, 2024',
   network: {
-    name: 'Sei Network',
-    logoUrl: IconSeiLogo,
+    name: 'Linea',
+    logoUrl: IconXfaiLogo,
     chainId: 1329,
     blockExplorer: { name: 'Seitrace', url: 'https://seitrace.com' },
     rpc: {

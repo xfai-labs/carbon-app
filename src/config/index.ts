@@ -1,23 +1,17 @@
-import ethereumDev from './ethereum/development';
-import ethereumProd from './ethereum/production';
-import seiDev from './sei/development';
-import seiProd from './sei/production';
+import lineaDev from './linea/development';
+import lineaProd from './linea/production';
 export { pairsToExchangeMapping } from './utils';
 
 const configs = {
-  ethereum: {
-    development: ethereumDev,
-    production: ethereumProd,
-  },
-  sei: {
-    development: seiDev,
-    production: seiProd,
+  linea: {
+    development: lineaDev,
+    production: lineaProd,
   },
 };
 type Network = keyof typeof configs;
 type Mode = 'development' | 'production';
 
-const network = (import.meta.env.VITE_NETWORK || 'ethereum') as Network;
+const network = (import.meta.env.VITE_NETWORK || 'linea') as Network;
 const mode = import.meta.env.MODE as Mode;
 
 if (!configs[network]) {

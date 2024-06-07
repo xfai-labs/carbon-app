@@ -1,6 +1,6 @@
 {
-  "short_name": "Carbon",
-  "name": "Carbon",
+  "short_name": "Xfai Strategies",
+  "name": "Xfai Strategies",
   "icons": [
     {
       "src": "favicon.ico",
@@ -23,8 +23,8 @@
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "providedBy": {
-    "name": "Carbon",
-    "url": "https://carbondefi.xyz"
+    "name": "Xfai Strategies",
+    "url": "https://stragegies.xfai.com"
   },
   "description": "Carbon is a decentralized finance protocol developed by Bancor.",
   "iconPath": "logo512.png"
