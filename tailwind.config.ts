@@ -10,6 +10,10 @@ function createTwConfigValues(start: number, end: number, step: number) {
   return obj;
 }
 
+// const myColorRgb = rgb('#33CBCB');
+// const myColorOklch = oklchXfai(myColorRgb);
+// console.log(myColorOklch);
+
 const oklch = (l: number, c: number, h: number) => {
   const result = formatRgb(`oklch(${l} ${c} ${h} / 0)`);
   return result.replace(', 0)', ', <alpha-value>)');
@@ -33,6 +37,17 @@ export default {
       xl: '1280px',
       '2xl': '1536px',
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '0.5rem',
+        sm: '0.5rem',
+        md: '1rem',
+        lg: '2rem',
+        xl: '2rem',
+        '2xl': '4rem',
+      },
+    },
     colors: ({ colors }) => {
       // Background color variables
       const hue = 0;
@@ -40,25 +55,37 @@ export default {
       return {
         background: {
           50: oklch(0.99, chroma, hue),
-          100: oklch(0.97, chroma, hue),
-          200: oklch(0.92, chroma, hue),
-          300: oklch(0.87, chroma, hue),
-          400: oklch(0.72, chroma, hue),
-          500: oklch(0.56, chroma, hue),
-          600: oklch(0.44, chroma, hue),
-          700: oklch(0.37, chroma, hue),
-          800: oklch(0.27, chroma, hue),
-          900: oklch(0.2, chroma, hue),
+          100: oklch(0.9, chroma, hue),
+          200: oklch(0.85, chroma, hue),
+          300: oklch(0.75, chroma, hue),
+          400: oklch(0.65, chroma, hue),
+          500: oklch(0.5, chroma, hue),
+          600: oklch(0.4, chroma, hue),
+          700: oklch(0.3, chroma, hue),
+          800: oklch(0.2, chroma, hue),
+          900: oklch(0.15, chroma, hue),
         },
         white: colors.white,
         transparent: colors.transparent,
-        primary: lightDark(0.68, 0.153, 160), // #00B578
-        error: lightDark(0.65, 0.147, 15), // #D86371
-        sell: lightDark(0.65, 0.147, 15), // #D86371
-        buy: lightDark(0.68, 0.153, 160), // #00B578
-        success: lightDark(0.68, 0.153, 160), // #00B578
+        primary: lightDark(
+          0.7673997134228575,
+          0.12075662887784851,
+          194.93099732668745
+        ), // #33CBCB
+        error: lightDark(
+          0.5971164391943622,
+          0.24078779702610975,
+          23.15372690704209
+        ), // #ED0131
+        sell: lightDark(0.65, 0.147, 15), // #D86371 // TODO check when deployed
+        buy: lightDark(0.68, 0.153, 160), // #00B578 // TODO check when deployed
+        success: lightDark(
+          0.7673997134228575,
+          0.12075662887784851,
+          194.93099732668745
+        ), // #33CBCB
         warning: lightDark(0.747, 0.18, 57.36), // #ff8a00
-        black: oklch(0.13, chroma, hue),
+        black: oklch(0.1822037016468545, chroma, hue),
 
         cyan: '#33CBCB',
         'cyan-dark': '#049494',
@@ -67,20 +94,7 @@ export default {
         red: '#ED0131',
 
         // Themed
-        bg: 'rgb(var(--background) / <alpha-value>)',
-        'white-black': 'rgb(var(--white-black) / <alpha-value>)',
-        'black-white': 'rgb(var(--black-white) / <alpha-value>)',
-        'white-blue': 'rgb(var(--white-blue) / <alpha-value>)',
-        90: 'rgb(var(--grey-90) / <alpha-value>)',
-        80: 'rgb(var(--grey-80) / <alpha-value>)',
-        70: 'rgb(var(--grey-70) / <alpha-value>)',
-        60: 'rgb(var(--grey-60) / <alpha-value>)',
-        50: 'rgb(var(--grey-50) / <alpha-value>)',
-        40: 'rgb(var(--grey-40) / <alpha-value>)',
-        30: 'rgb(var(--grey-30) / <alpha-value>)',
-        20: 'rgb(var(--grey-20) / <alpha-value>)',
-        10: 'rgb(var(--grey-10) / <alpha-value>)',
-        5: 'rgb(var(--grey-5) / <alpha-value>)',
+        xfai90: 'rgb(var(--grey-90) / <alpha-value>)',
       };
     },
     spacing: createTwConfigValues(0, 100, 1),
@@ -111,8 +125,9 @@ export default {
       '3xl': '0 13px 13px rgb(0 0 0 / 0.05)',
     },
     fontFamily: {
-      text: ['var(--font-family, Rubik)', 'sans-serif'],
-      title: ['var(--font-family, Rubik)', 'sans-serif'],
+      text: ['Rubik', 'sans-serif'],
+      title: ['Rubik', 'sans-serif'],
+      sans: ['Rubik', 'sans-serif'],
     },
     fontSize: {
       10: ['0.625rem', { lineHeight: '0.875rem' }],

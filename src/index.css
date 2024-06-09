@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -221,4 +222,67 @@ input[type='checkbox'] {
 
 input[type='search']::-webkit-search-cancel-button {
   display: none;
+}
+
+
+/* XFAI */
+
+/* Add dark theme colors as static colors */
+@layer base {
+  :root {
+    --background: 18 18 18;
+    --grey-90: 8 8 8;
+    --grey-80: 19 19 19;
+    --grey-70: 26 26 26;
+    --grey-60: 29 29 30;
+    --grey-50: 35 35 38;
+    --grey-40: 39 39 42;
+    --grey-30: 63 63 70;
+    /* --grey-20: 82 82 91; */
+    --grey-10: 113 113 122;
+    --grey-5: 161 161 170;
+  }
+}
+
+/* Header */
+header {
+  @apply bg-xfai90 flex justify-center;
+}
+
+/* Header Container */
+header > .main-menu {
+  @apply bg-transparent container;
+}
+/* Logo Size */
+
+header .main-menu nav > div > a:first-child {
+  @apply !ml-18
+}
+
+header .main-menu nav > div > a {
+  @apply text-white;
+  @apply relative;
+  @apply text-18 font-weight-400;
+  @apply py-12 2xl:py-14 px-0;
+  @apply !ml-32;
+  @apply before:bg-magenta before:absolute before:bottom-0 before:left-0 before:block before:h-[3px] before:w-0 before:transition-[width] before:content-[''] [&.active]:before:w-full [&:not(.active)]:hover:before:w-1/2;
+}
+
+/* Logo Size */
+header .main-menu a svg {
+  @apply w-[34px] h-[34px];
+}
+
+footer {
+  @apply !bg-xfai90 flex justify-center;
+  @apply !hidden md:!flex
+}
+
+footer.mobile-menu {
+  @apply !flex md:!hidden
+}
+
+
+.ReactQueryDevtools {
+  @apply !hidden
 }
