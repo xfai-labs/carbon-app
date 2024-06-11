@@ -5,8 +5,8 @@ const addresses = {
   ETH: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
   ZERO: '0x0000000000000000000000000000000000000000',
   WETH: '0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f',
-  USDC: '0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1',
-  USDT: '0xB75D0B03c06A926e488e2659DF1A861F860bD3d1',
+  USDC: '0x176211869cA2b568f2A7D4EE941E073a821EE1ff',
+  DAI: '0x4AF15ec2A0BD43Db75dd04E62FAA3B8EF36b00d5',
 };
 
 export const commonConfig: AppConfig = {
@@ -41,11 +41,11 @@ export const commonConfig: AppConfig = {
   popularPairs: [
     [addresses.ETH, addresses.WETH],
     [addresses.ETH, addresses.USDC],
-    [addresses.ETH, addresses.USDT],
+    [addresses.ETH, addresses.DAI],
   ],
   popularTokens: {
-    base: [addresses.ETH, addresses.WETH, addresses.USDT, addresses.USDC],
-    quote: [addresses.ETH, addresses.WETH, addresses.USDT, addresses.USDC],
+    base: [addresses.ETH, addresses.WETH, addresses.DAI, addresses.USDC],
+    quote: [addresses.ETH, addresses.WETH, addresses.DAI, addresses.USDC],
   },
   addresses: {
     tokens: addresses,
