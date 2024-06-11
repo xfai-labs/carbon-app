@@ -14,8 +14,8 @@ export const commonConfig: AppConfig = {
   appUrl: 'https://strategies.xfai.com',
   carbonApi: 'https://strategies-api.xfai.com/v1/',
   selectableConnectionTypes: ['injected', 'coinbaseWallet'],
-  walletConnectProjectId: '',
-  isSimulatorEnabled: false,
+  walletConnectProjectId: '8ddcd05d875f85ad14494211df6350fc',
+  isSimulatorEnabled: true,
   policiesLastUpdated: '27 May, 2024',
   network: {
     name: 'Linea Network',
