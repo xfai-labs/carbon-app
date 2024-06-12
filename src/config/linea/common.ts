@@ -39,9 +39,8 @@ export const commonConfig: AppConfig = {
   },
   defaultTokenPair: [addresses.ETH, addresses.WETH],
   popularPairs: [
-    [addresses.ETH, addresses.WETH],
-    [addresses.ETH, addresses.USDC],
     [addresses.ETH, addresses.DAI],
+    [addresses.ETH, addresses.USDC],
   ],
   popularTokens: {
     base: [addresses.ETH, addresses.WETH, addresses.DAI, addresses.USDC],
