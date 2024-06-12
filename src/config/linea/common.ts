@@ -37,7 +37,7 @@ export const commonConfig: AppConfig = {
         'https://tokens.xfai.com/ethereum/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.webp',
     },
   },
-  defaultTokenPair: [addresses.ETH, addresses.WETH],
+  defaultTokenPair: [addresses.ETH, addresses.DAI],
   popularPairs: [
     [addresses.ETH, addresses.DAI],
     [addresses.ETH, addresses.USDC],
